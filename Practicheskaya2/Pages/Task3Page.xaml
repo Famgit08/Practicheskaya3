@@ -1,0 +1,33 @@
+﻿<Page x:Class="Practicheskaya2.Pages.Task3Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Task3Page">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" 
+                   Text="Задача 3: Дан целочисленный массив размера N. Вывести вначале все его чётные элементы, а затем — нечётные." 
+                   TextWrapping="Wrap" 
+                   FontSize="16" 
+                   Margin="0,0,0,20"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Введите размер массива N: " VerticalAlignment="Center"/>
+            <TextBox x:Name="txtSize3" Width="80" Margin="10,0,10,0"/>
+            <Button x:Name="btnGenerate3" Content="Сгенерировать" Width="120" Height="30" Click="btnGenerate3_Click"/>
+        </StackPanel>
+
+        <TextBlock Grid.Row="2" x:Name="txtArray3" Text="Массив: " Margin="0,0,0,10" TextWrapping="Wrap"/>
+
+        <Button Grid.Row="3" x:Name="btnCalculate3" Content="Выполнить" Width="150" Height="40" HorizontalAlignment="Left" Click="btnCalculate3_Click"/>
+
+        <TextBlock Grid.Row="4" Text="Результат:" Margin="0,20,0,5"/>
+        <TextBox Grid.Row="4" x:Name="txtResult3" IsReadOnly="True" Height="80" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,40,0,0"/>
+    </Grid>
+</Page>
